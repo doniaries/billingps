@@ -170,13 +170,17 @@
 
     <div class="card">
         <div class="card-header">
-            <div class="icon-wrap">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                </svg>
+            <div class="icon-wrap" style="{{ \App\Models\Setting::first()?->logo ? 'background: transparent; box-shadow: none;' : '' }}">
+                @if(\App\Models\Setting::first()?->logo)
+                    <img src="{{ asset('storage/' . \App\Models\Setting::first()->logo) }}" alt="Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 17px;">
+                @else
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                @endif
             </div>
-            <h1 class="card-title">Welcome Back</h1>
+            <h1 class="card-title">{{ \App\Models\Setting::first()?->rental_name ?? 'Welcome Back' }}</h1>
             <p class="card-subtitle">Masuk ke dashboard Anda</p>
         </div>
 

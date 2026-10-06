@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'welcome')->name('home');
+Route::redirect('/', '/login')->name('home');
 
 // Routes untuk semua user yang sudah login & verified
 Route::middleware(['auth', 'verified'])->group(function () {

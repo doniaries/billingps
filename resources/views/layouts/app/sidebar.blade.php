@@ -15,9 +15,20 @@
 
         <flux:sidebar.nav>
             <flux:sidebar.group :heading="__('Platform')" class="grid">
-                <flux:sidebar.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')"
-                    wire:navigate>
+                <flux:sidebar.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
                     {{ __('Dashboard') }}
+                </flux:sidebar.item>
+                <flux:sidebar.item icon="tv" href="#" wire:navigate>
+                    {{ __('Menu TV') }}
+                </flux:sidebar.item>
+                <flux:sidebar.item icon="users" href="#" wire:navigate>
+                    {{ __('Menu Pelanggan') }}
+                </flux:sidebar.item>
+                <flux:sidebar.item icon="document-text" href="#" wire:navigate>
+                    {{ __('Laporan') }}
+                </flux:sidebar.item>
+                <flux:sidebar.item icon="cog" href="#" wire:navigate>
+                    {{ __('Pengaturan') }}
                 </flux:sidebar.item>
             </flux:sidebar.group>
         </flux:sidebar.nav>
