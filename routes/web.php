@@ -7,6 +7,10 @@ Route::redirect('/', '/login')->name('home');
 // Routes untuk semua user yang sudah login & verified
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
+    Route::view('settings', 'pages.settings-page')->name('settings');
+    Route::view('tv', 'pages.tv-page')->name('tv');
+    Route::view('customers', 'pages.customer-page')->name('customers');
+    Route::view('reports', 'pages.report-page')->name('reports');
 });
 
 // Routes khusus superadmin

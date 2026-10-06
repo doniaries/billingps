@@ -13,7 +13,7 @@ class SettingSeeder extends Seeder
             ['id' => 1], // Agar selalu mengupdate baris yang sama, bukan menambah data ganda
             [
                 'rental_name' => 'Gober Zone',
-                'tv_count' => 4,
+                'tv_count' => 5,
                 'address' => 'jl.pasar inpres',
                 'contact_number' => '0812345679',
                 'owner_name' => 'Aulia Rahmat',

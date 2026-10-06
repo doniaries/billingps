@@ -18,16 +18,16 @@
                 <flux:sidebar.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
                     {{ __('Dashboard') }}
                 </flux:sidebar.item>
-                <flux:sidebar.item icon="tv" href="#" wire:navigate>
+                <flux:sidebar.item icon="tv" :href="route('tv')" :current="request()->routeIs('tv')" wire:navigate>
                     {{ __('Menu TV') }}
                 </flux:sidebar.item>
-                <flux:sidebar.item icon="users" href="#" wire:navigate>
+                <flux:sidebar.item icon="users" :href="route('customers')" :current="request()->routeIs('customers')" wire:navigate>
                     {{ __('Menu Pelanggan') }}
                 </flux:sidebar.item>
-                <flux:sidebar.item icon="document-text" href="#" wire:navigate>
+                <flux:sidebar.item icon="document-text" :href="route('reports')" :current="request()->routeIs('reports')" wire:navigate>
                     {{ __('Laporan') }}
                 </flux:sidebar.item>
-                <flux:sidebar.item icon="cog" href="#" wire:navigate>
+                <flux:sidebar.item icon="cog" :href="route('settings')" :current="request()->routeIs('settings')" wire:navigate>
                     {{ __('Pengaturan') }}
                 </flux:sidebar.item>
             </flux:sidebar.group>
