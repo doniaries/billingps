@@ -11,7 +11,10 @@
 <body class="bg-gray-100">
 
     <div class="max-w-7xl mx-auto py-10">
-        <h1 class="text-3xl font-bold text-center mb-8">Dashboard Kasir Billing PS</h1>
+        @php
+            $setting = \App\Models\Setting::first();
+        @endphp
+        <h1 class="text-3xl font-bold text-center mb-8">Dashboard Kasir {{ $setting->rental_name ?? 'Billing PS' }}</h1>
         
         <!-- Memanggil Komponen Livewire -->
         <livewire:cashier-dashboard />
